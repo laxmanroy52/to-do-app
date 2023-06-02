@@ -11,7 +11,7 @@ let main = document.getElementsByTagName('main')[0];
 let rem = document.querySelector('.rem');
 let notice = document.querySelector('.notice');
 let startX, startY, offsetX = 0, offsetY = 0;
-let date, hour, minute, second;
+let date, second;
 let count = 0;
 let select;
 
