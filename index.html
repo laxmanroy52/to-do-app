@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!--add css-->
+  <link rel="stylesheet" href="style.css" />
+  <title>Document</title>
+</head>
+<body>
+  <header>
+   <div class="logo">To Do Apps</div>
+   <div class="task"></div>
+  </header>
+  
+  <main>
+    <div class="notice">
+       <div class="angle">
+         <div class="draw"></div>
+         <div class="rem" onclick="cross(this)">×</div>
+        <div class="float-text"></div>
+       </div>
+    </div>
+  </main>
+  <div class="container">
+  <div id="todo">
+    <input id="msg" type="text"  autofocus autocomplete/>
+    <div class="right-content">
+       <input id="time" type="time" value="12:00"/>
+       <button id="button">+</button>
+    </div>
+  </div>
+  </div>
+  
+  <!--add js -->
+  <script src="main.js"></script>
+</body>
+</html>

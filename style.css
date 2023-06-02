@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@500&display=swap');
+
+body {
+  margin: 0;
+  background: #07412a;
+  font-family: 'Noto Sans Mono', monospace;
+}
+header {
+  color: white;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 0 solid red;
+  transition: .5s;
+  overflow: hidden;
+}
+.logo {
+  line-height: 40px;
+  transition: inherit;
+  font-size: 200%;
+}
+.task {
+  transition: inherit;
+  font-size: 200%;
+}
+/* fixed msg section start */
+.container {
+  height: 80px;
+}
+#todo {
+  background: white;
+  border-radius: 8px;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  position: fixed;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+}
+
+#msg {
+  flex-grow: 1;
+  border: 0;
+  color: red;
+  padding: 0 4px;
+  font-size: 18px;
+  overflow: hidden;
+}
+
+.right-content {
+  display: flex;
+  align-self: flex-end;
+}
+
+#msg:focus,
+#time:focus {
+  outline: 0;
+}
+
+#time {
+  background: transparent;
+  width: 85px;
+  color: red;
+  height: 45px;
+  border: 0;
+  font-size: 20px;
+  border-radius: 0;
+  box-sizing: border-box;
+  border-left: 2px solid red;
+  flex-shrink: 0;
+}
+
+#button {
+  background-color: red;
+  color: white;
+  border-radius: 0 8px 8px 0;
+  border: 0;
+  font-size: 20px;
+  font-weight: bold;
+  font-size: 30px;
+  width: 50px; 
+  height: 45px;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+
+/* fixed msg section end*/ 
+#list {
+  background-color: #47A992;
+  border-radius: 8px;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  margin: 5px auto 0;
+  padding: 6px 10px;
+  bottom: 20px;
+  transition: .5s;
+  box-sizing: border-box;
+}
+.text {
+  line-height: 30px;
+  color: white;
+  padding: 0 5px;
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.date, .done, delete {
+  margin-left: auto;
+  margin-right: 5px;
+}
+.date {
+  background: rgba(255,255,255,.5);
+  color: red;
+  border-radius: 8px;
+  line-height: 30px;
+  padding: 0 5px;
+}
+.done, .delete, .rem {
+  color: white;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 20px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  background: blue;
+}
+.done {
+  background: blue;
+}
+.delete {
+  background: red;
+}
+.rem {
+  background-color: red;
+  margin-left: 5px;
+  order: 2;
+  flex-shrink: 0;
+}
+.notice {
+  position: absolute;
+  width: 80%;
+  left: 0;
+  top: -50%;
+  transform: translateX(-50%);
+  color: white;
+  transition: .5s;
+}
+
+.angle {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 8px;
+  box-sizing: border-box;
+  background: green;
+  min-height: 40px;
+  color: white;
+  position: relative;
+  border-radius: 5px;
+}
+.float-text {
+  flex-grow: 1;
+  transition: .5s;
+  order: 1;
+}
+.draw {
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 15px solid green;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: -15px;
+}
