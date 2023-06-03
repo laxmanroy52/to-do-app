@@ -12,7 +12,7 @@ header {
   align-items: center;
   justify-content: center;
   border-bottom: 0 solid red;
-  transition: .5s;
+  transition: .2s;
   overflow: hidden;
 }
 .logo {
@@ -25,9 +25,7 @@ header {
   font-size: 200%;
 }
 /* fixed msg section start */
-.container {
-  height: 80px;
-}
+
 #todo {
   background: white;
   border-radius: 8px;
@@ -39,12 +37,13 @@ header {
   bottom: 20px;
   left: 0;
   right: 0;
+  z-index: 4;
 }
 
 #msg {
   flex-grow: 1;
   border: 0;
-  color: red;
+  color: black;
   padding: 0 4px;
   font-size: 18px;
   overflow: hidden;
@@ -90,15 +89,16 @@ header {
 
 /* fixed msg section end*/ 
 #list {
-  background-color: #47A992;
+  background-color: green;
+  position: relative;
   border-radius: 8px;
   width: 80%;
+  transform: scaleY(0);
   display: flex;
   align-items: center;
   margin: 5px auto 0;
   padding: 6px 10px;
-  bottom: 20px;
-  transition: .5s;
+  transition: .2s;
   box-sizing: border-box;
 }
 .text {
@@ -115,8 +115,8 @@ header {
   margin-right: 5px;
 }
 .date {
-  background: rgba(255,255,255,.5);
-  color: red;
+  background: rgba(255,255,255,.3);
+  color: white;
   border-radius: 8px;
   line-height: 30px;
   padding: 0 5px;
@@ -128,9 +128,9 @@ header {
   font-size: 20px;
   width: 30px;
   height: 30px;
-  text-align: center;
-  line-height: 30px;
-  background: blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .done {
   background: blue;
@@ -147,23 +147,25 @@ header {
 .notice {
   position: absolute;
   width: 80%;
-  left: 0;
+  left: 50%;
   top: -50%;
   transform: translateX(-50%);
   color: white;
-  transition: .5s;
+  transition: .1s;
+  z-index: 5;
 }
 
 .angle {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   padding: 5px 8px;
   box-sizing: border-box;
-  background: green;
+  background: #6c757b;
   min-height: 40px;
   color: white;
-  position: relative;
   border-radius: 5px;
+  text-align: justify;
+  box-shadow: 3px 3px 2px #ffc107, -3px -3px 2px #ffc107, -3px 3px 2px #ffc107, 3px -3px 2px #ffc107;
 }
 .float-text {
   flex-grow: 1;
@@ -175,10 +177,30 @@ header {
   height: 0;
   border-left: 15px solid transparent;
   border-right: 15px solid transparent;
-  border-bottom: 15px solid green;
+  border-bottom: 15px solid #ffc107;
   position: absolute;
   left: 0;
   right: 0;
   margin: 0 auto;
   top: -15px;
+}
+@keyframes expandTask {
+  0% {
+    transform: scaleY(0);
+  }
+  80% {
+    transform: scaleY(1.1);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes removeTask {
+  0% {
+    transform: scaleY(1);
+  }
+  100% {
+    transform: scaleY(0);
+  }
 }
