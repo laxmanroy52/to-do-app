@@ -1,5 +1,5 @@
 'use strict';
-
+alert(6788);
 let header = document.querySelector('header');
 let task = document.getElementsByClassName('task')[0];
 let logo = document.querySelector('.logo');
