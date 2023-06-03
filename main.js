@@ -112,9 +112,10 @@ setInterval(function(){
   time = date.toLocaleTimeString().slice(0, -3);
   for (let x = 0; x < count; x++) {
     if (time == select[x].innerText && second == 0) {
-      select[x].parentNode.children[2].style.opacity = '.5';
-      select[x].parentNode.firstElementChild.style.textDecoration = 'line-through';
-      navigator.vibrate(300);
-    }
-  }
+  select[x].parentNode.children[2].style.backgroundColor = 'white';
+  select[x].parentNode.children[2].style.color = 'green';
+  select[x].parentNode.firstElementChild.style.textDecoration = 'line-through';
+  navigator.vibrate(300);
+}
+}
 }, 1000);
