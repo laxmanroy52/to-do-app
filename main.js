@@ -49,8 +49,15 @@ create.addEventListener('click', function() {
 
 // ellipsis text view as notice
 function see(e) {
+  let text = e.parentNode.parentNode.children[0].lastElementChild.children[2];
     e.parentNode.parentNode.firstElementChild.style = `top: ${e.parentNode.offsetTop + e.parentNode.offsetHeight + 15}px`;
-     e.parentNode.parentNode.children[0].lastElementChild.children[2].innerText = e.innerText;
+     text.innerText = e.innerText;
+     
+     if ( text.offsetHeight <= 30) {
+     text.style.lineHeight = '30px';
+     } else {
+       text.style.lineHeight = '20px';
+     }
 }
 
 // done task 
@@ -68,8 +75,8 @@ function del(e) {
   task.innerText = 'Task: ' + count;
   let item = e.parentNode.parentNode.firstElementChild;
   //add remove animation
-  e.parentNode.style.zIndex = '-1';
-  e.parentNode.style.animation = 'removeTask 0.2s ease-out';
+  e.parentNode.style.zIndex = '2';
+  e.parentNode.style.animation = 'removeTask .2s ease-out';
   e.parentNode.style.marginTop = '-42px';
 
   //when selected up task delete
@@ -102,7 +109,6 @@ function del(e) {
 //remove ellipsis text notice bar
 function cross(e) {
   e.parentNode.parentNode.style.top = -(e.parentNode.parentNode.offsetHeight + 15) + 'px';
-  
 }
 
 //when time come task done and vibrate

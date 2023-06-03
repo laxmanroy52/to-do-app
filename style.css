@@ -37,7 +37,7 @@ header {
   bottom: 20px;
   left: 0;
   right: 0;
-  z-index: 4;
+  z-index: 10;
 }
 
 #msg {
@@ -100,6 +100,7 @@ header {
   padding: 6px 10px;
   transition: .2s;
   box-sizing: border-box;
+  z-index: 3;
 }
 .text {
   line-height: 30px;
@@ -140,9 +141,8 @@ header {
 }
 .rem {
   background-color: red;
-  margin-left: 5px;
-  order: 2;
-  flex-shrink: 0;
+  margin-left: 13px;
+  float: right;
 }
 .notice {
   position: absolute;
@@ -152,27 +152,25 @@ header {
   transform: translateX(-50%);
   color: white;
   transition: .1s;
-  z-index: 5;
+  z-index: 99;
 }
 
 .angle {
-  display: flex;
-  align-items: center;
-  padding: 5px 8px;
+  padding: 5px 5px 5px 8px;
   box-sizing: border-box;
   background: #6c757b;
   min-height: 40px;
   color: white;
   border-radius: 5px;
   text-align: justify;
-  box-shadow: 3px 3px 2px #ffc107, -3px -3px 2px #ffc107, -3px 3px 2px #ffc107, 3px -3px 2px #ffc107;
+  box-shadow: 2px 2px 2px #ffc107, -2px -2px 2px #ffc107, -2px 2px 2px #ffc107, 2px -2px 2px #ffc107;
+  margin-bottom: 10px;
 }
+
 .float-text {
-  flex-grow: 1;
-  transition: .5s;
-  order: 1;
+  line-height: 0px;
 }
-.draw {
+.arrow {
   width: 0;
   height: 0;
   border-left: 15px solid transparent;
