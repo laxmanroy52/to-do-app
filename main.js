@@ -143,17 +143,19 @@ setInterval(function(){
   second = date.getSeconds();
   time = date.toLocaleTimeString().slice(0, -3);
   for (let x = 0; x < count; x++) {
-    if (time == select[x].innerText && second == 0) {
+    if (time == select[x].innerText && (second == 0)) {
   select[x].parentNode.children[2].style.backgroundColor = 'white';
   select[x].parentNode.children[2].style.color = 'green';
   select[x].parentNode.firstElementChild.style.textDecoration = 'line-through';
   navigator.vibrate(300);
 }
 }
-    
-    if (getText.value.trim().replace(/\s+/gm, ' ').length > 0 && doubleText()) {
-      create.style.color = 'white';
-    } else {
-        create.style.color = 'rgba(0,0,0,.4)';
-    }
-}, 100);
+}, 1000);
+
+setInterval(function(){
+  if (getText.value.trim().replace(/\s+/gm, ' ').length > 0 && doubleText()) {
+    create.style.color = 'white';
+  } else {
+    create.style.color = 'rgba(0,0,0,.4)';
+  }
+}, 50);
