@@ -41,7 +41,7 @@ We understand the importance of data privacy and security. The Todo app employs 
 
 Ready to supercharge your productivity? Download the Todo app today and experience a new level of organization and efficiency. Say hello to stress-free task management and goodbye to missed deadlines!
 
-📲 Get started now: [Link to the app]
+📲 Get started now: https://laxmanroy52.github.io/to-do-app/
 
-#Productivity #TaskManagement 
-#todo
+
+
