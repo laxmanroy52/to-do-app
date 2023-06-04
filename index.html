@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <!--add css-->
   <link rel="stylesheet" href="style.css" />
-  <title>To Do Apps</title>
+  <title>Document</title>
 </head>
 <body>
   <header>
@@ -17,7 +17,7 @@
   <main>
     <div class="notice">
        <div class="angle">
-         <div class="draw"></div>
+         <div class="arrow"></div>
          <div class="rem" onclick="cross(this)">×</div>
         <div class="float-text"></div>
        </div>
@@ -25,10 +25,10 @@
   </main>
   <div class="container">
   <div id="todo">
-    <input id="msg" type="text"  autofocus autocomplete/>
+    <input id="msg" type="text"  autofocus autocomplete />
     <div class="right-content">
        <input id="time" type="time" value="12:00"/>
-       <button id="button">+</button>
+       <button id="button" onclick="button(this)">+</button>
     </div>
   </div>
   </div>
