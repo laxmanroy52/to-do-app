@@ -74,21 +74,22 @@ header {
 
 #button {
   background-color: red;
-  color: white;
+  color: rgba(0,0,0,.4);
   border-radius: 0 8px 8px 0;
   border: 0;
   font-size: 20px;
   font-weight: bold;
   font-size: 30px;
-  width: 50px; 
+  width: 50px;
   height: 45px;
+  transition: .2s;
   box-sizing: border-box;
   flex-shrink: 0;
 }
 
 
 /* fixed msg section end*/ 
-#list {
+.list {
   background-color: green;
   position: relative;
   border-radius: 8px;
@@ -166,10 +167,10 @@ header {
   box-shadow: 2px 2px 2px #ffc107, -2px -2px 2px #ffc107, -2px 2px 2px #ffc107, 2px -2px 2px #ffc107;
   margin-bottom: 10px;
 }
-
+/*
 .float-text {
-  line-height: 0px;
-}
+  line-height: ;
+}*/
 .arrow {
   width: 0;
   height: 0;
